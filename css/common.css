@@ -1,0 +1,201 @@
+﻿@import url("normalize.css");
+@import url("reset.css");
+@import url("flex-utility.css");
+
+:root {
+  --bg-color: #FFFEFA;
+  --text-primary: #3F2B2E;
+  --text-secondary: #5C5C5C;
+  --text-desc: #3F3F46;
+  --sub-text: #ffffff;
+  --font-sans: "Pretendard", sans-serif;
+  --font-serif: "Nanum Myeongjo", sans-serif;
+  --font-heading: "Cormorant Garamond", serif;
+
+  /* Layout */
+  --base-font: 14px;
+  --base-unit: 20px;
+  --max-width: 1720px;
+
+  /* Text-size styles */
+  --heading--xl: 56px;
+  --heading--l: 44px;
+  --heading--s: 40px;
+  --title--x-l: 38px;
+  --title--l: 36px;
+  --title--m: 34px;
+  --title--s: 32px;
+  --title--x-s: 30px;
+  --sub-title--l: 26px;
+  --sub-title--m: 24px;
+  --sub-title--s: 22px;
+  --large: 20px;
+  --medium: 18px;
+  --normal: 16px;
+  --small: 14px;
+}
+
+/* 타이포그래피 */
+
+.text-heading-xl {
+  font-size: var(--heading--xl);
+
+}
+
+.text-heading-l {
+  font-size: var(--heading--l);
+  font-family: var(--font-heading);
+  letter-spacing: -2%;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.text-heading-s {
+  font-size: var(--heading--s);
+  font-weight: 700;
+}
+
+.text-title-xl {
+  font-size: var(--title--x-l);
+  line-height: auto;
+  font-weight: 700;
+}
+
+.text-title-l {
+  font-size: var(--title--l);
+  line-height: auto;
+  font-weight: 700;
+}
+
+.text-title-m {
+  font-size: var(--title--m);
+  line-height: auto;
+  font-weight: 700;
+}
+
+.text-title-s {
+  font-size: var(--title--s);
+  line-height: auto;
+  font-weight: 700;
+}
+
+.text-title-xs {
+  font-size: var(--title--x-s);
+  line-height: auto;
+  font-weight: 700;
+}
+
+.text-subtitle-xl {
+  font-size: var(--sub-title--l);
+  font-weight: 700;
+}
+
+.text-subtitle-l {
+  font-size: var(--sub-title--l);
+}
+
+.text-subtitle-m {
+  font-size: var(--sub-title--m);
+  font-weight: 600;
+}
+
+.text-subtitle-s {
+  font-size: var(--sub-title--s);
+  font-weight: 600;
+}
+
+.text-subtitle-xs {
+  font-size: var(--large);
+  font-weight: 600;
+}
+
+.text-large-b {
+  font-size: var(--large);
+  font-weight: 700;
+}
+
+.text-large-r {
+  font-size: var(--large);
+  font-weight: 400;
+}
+
+.text-medium-b {
+  font-size: var(--medium);
+  font-weight: 700;
+}
+
+.text-medium-r {
+  font-size: var(--medium);
+  font-weight: 400;
+}
+
+.text-normal-b {
+  font-size: var(--normal);
+  font-weight: 700;
+}
+
+.text-normal-r {
+  font-family: var(--font-serif);
+  font-size: var(--normal);
+  line-height: 24px;
+  color: var(--text-desc);
+  font-weight: 400;
+}
+
+.text-small-b {
+  font-size: var(--small);
+  font-weight: 700;
+}
+
+.text-small-m {
+  font-size: var(--small);
+  font-weight: 500;
+}
+
+.text-small-r {
+  font-family: var(--font-sans);
+  font-size: var(--base-font);
+  font-weight: 400;
+  line-height: var(--base-unit);
+  color: var(--text-desc);
+}
+
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--bg-color);
+  color: var(--text-primary);
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+/* 레이아웃 */
+.container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
