@@ -329,40 +329,42 @@ body {
 .gift-con {
   width: 100% !important;
   max-width: none !important; /* Bootstrap container의 max-width 해제 */
-  padding: 0 !important;       /* 좌우 여백 제거 */
+  padding: 0 !important; /* 좌우 여백 제거 */
   display: flex;
   flex-wrap: wrap;
 }
 
 /* 왼쪽, 오른쪽 구역 공통 스타일 (반씩 차지하며 배경 이미지 꽉 채움) */
-.gift-left, .gift-right {
+.gift-left,
+.gift-right {
   flex: 1 1 50%;
   min-width: 320px; /* 모바일 대응을 위한 최소 너비 */
-  height: 50vw;     /* 반응형 높이 설정을 위해 뷰포트 너비 비례 (또는 500px 등 고정값 사용 가능) */
+  height: 50vw; /* 반응형 높이 설정을 위해 뷰포트 너비 비례 (또는 500px 등 고정값 사용 가능) */
   min-height: 450px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; /* 이미지가 구역에 꽉 차도록 설정 */
-  
+
   /* 내부 텍스트 배치를 위한 flex 설정 */
   display: flex;
   align-items: flex-end; /* 텍스트를 바닥으로 밀어냄 */
-  padding: 40px;         /* 내부 여백 */
+  padding: 40px; /* 내부 여백 */
   box-sizing: border-box;
   position: relative;
 }
 
 /* 각 구역별 배경 이미지 지정 (실제 이미지 경로로 수정하세요) */
 .gift-left {
-  background-image: url('./assets/img/product_img1.jpg'); 
+  background-image: url("./assets/img/product_img1.jpg");
 }
 
 .gift-right {
-  background-image: url('./assets/img/product_img2.jpg');
+  background-image: url("./assets/img/product_img2.jpg");
 }
 
 /* 텍스트 박스 스타일링 (글자 시인성을 위해 필요시 살짝 그림자나 배경 추가 가능) */
-.gift-left-txt-box, .gift-right-txt-box {
+.gift-left-txt-box,
+.gift-right-txt-box {
   width: 100%;
   color: #fff; /* 예시 이미지처럼 어두운 배경일 때 흰색 글씨 */
   position: relative;
@@ -403,9 +405,9 @@ body {
 
 /* 모바일 화면 대응 (화면이 작아지면 위아래로 배치) */
 @media (max-width: 768px) {
-  .gift-left, .gift-right {
+  .gift-left,
+  .gift-right {
     flex: 1 1 100%;
     height: 400px;
   }
 }
-/* Gift Section */
