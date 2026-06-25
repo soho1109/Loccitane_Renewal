@@ -110,6 +110,7 @@
 }
 
 .text-large-b {
+  font-family: var(--font-serif);
   font-size: var(--large);
   font-weight: 700;
 }

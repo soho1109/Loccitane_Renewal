@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -9,6 +12,16 @@ body {
 
 body {
   margin: 0;
+  scroll-snap-type: y proximity;
+  overflow-y: auto;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.promotion {
+  min-height: 200vh; /* 긴 콘텐츠 */
 }
 /* 헤더 */
 .header {
@@ -28,12 +41,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-color);
   backdrop-filter: blur(10px);
-
   border-bottom: 1px solid #e4e4e7;
-
   animation: headerSlideDown 0.3s ease;
 }
 
@@ -317,6 +327,22 @@ body {
   background: #3f2b2e;
   transition: transform 0.4s ease;
 }
+@media (max-width: 768px) {
+  .best-sellers-con {
+    flex-direction: column;
+  }
+  .best-sellers-title-box {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .best-sellers-product-con {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
 /* Best Sellers Section */
 
 /* Gift Section */
@@ -411,3 +437,45 @@ body {
     height: 400px;
   }
 }
+
+/* promotion 섹션 */
+
+.promotion-container,.promotion-intro,.promotion-cards {
+  width: 100%;
+}
+.promotion-card {
+  display: flex;
+  width: 100%;
+}
+
+.promotion-card-body:first-child{
+  width: 500px;
+  border: 1px solid blueviolet;
+  justify-content: flex-end;
+}
+
+.promotion-card-media,
+.promotion-card-body {
+  flex: 1;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+.promotion-card-body {
+  border: 1px solid red;
+}
+.promotion-card-tag {
+  padding-top: 100px;
+}
+.promotion-card-tag, .promotion-card-title, .promotion-card-text {
+  padding-bottom: 30px;
+  padding-left: 100px;
+}
+
+.promotion-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* promotion 섹션 */
